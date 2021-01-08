@@ -6,8 +6,6 @@
 package jaxrsfilter.resources;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.ws.rs.container.ContainerRequestContext;
@@ -40,11 +38,7 @@ public class ResourceBenchMarker implements ContainerRequestFilter, ContainerRes
 
         // Save requestTime into session
         session.setAttribute("requestTime", requestTime);
-        session.setAttribute("cookie", UUID.randomUUID());
         
-        // (Study)
-        // stdout cookie
-        System.out.println(Arrays.toString(this.httpServletRequest.getCookies()));
     }
 
     @Override
@@ -60,11 +54,10 @@ public class ResourceBenchMarker implements ContainerRequestFilter, ContainerRes
 
         // Get requestTime
         long requestTime = (long) session.getAttribute("requestTime");
+        
+        // Measure Performance 
         System.out.println("BenchMark : " + (responseTime - requestTime) + "msecs.");
         
-        // (Study)
-        // stdout cookie
-        System.out.println(session.getAttribute("cookie"));
     }
     
 }
