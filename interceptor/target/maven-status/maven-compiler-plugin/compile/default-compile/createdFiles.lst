@@ -1,0 +1,6 @@
+interceptor/ElapsedTime.class
+interceptor/JsfPage.class
+interceptor/ElapsedTimeInterceptor.class
+interceptor/LoggerProducer.class
+interceptor/resources/JavaEE8Resource.class
+interceptor/JAXRSConfiguration.class
