@@ -20,3 +20,5 @@ variable "analytics_instance_description" {}
 variable "analytics_instance_email_notification" {}
 variable "analytics_instance_network_endpoint_details_network_endpoint_type" {}
 variable "analytics_instance_network_endpoint_details_whitelisted_ips" {}
+variable "public_subnet_display_name" {}
+variable "public_subnet_cidr_block" {}

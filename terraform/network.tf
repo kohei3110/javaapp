@@ -6,6 +6,16 @@ resource "oci_core_vcn" "vcn" {
     dns_label = var.vcn_dns_label
 }
 
+# Public Subnet
+resource "oci_core_subnet" "public_subnet" {
+  display_name        = var.public_subnet_display_name
+  compartment_id = var.compartment_ocid
+  vcn_id         = oci_core_vcn.vcn.id
+  cidr_block          = var.public_subnet_cidr_block
+
+  # To Do : add security list & route table
+}
+
 # Internet Gateway
 resource "oci_core_internet_gateway" "internet_gateway" {
     compartment_id = var.compartment_ocid
