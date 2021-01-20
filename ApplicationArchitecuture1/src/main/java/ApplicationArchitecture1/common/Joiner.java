@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ApplicationArchitecture1.common;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import javax.inject.Named;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,15 +19,15 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Kohei Saito
  */
 @Entity
-@Table(name = "MEMBER")
+@Table(name = "JOINER")
 @XmlRootElement
 @NamedQuery(
-    name = Member.SQL_FIND_ALL,
-    query = "SELECT m from Member m")
-public class Member implements Serializable {
+    name = Joiner.SQL_FIND_ALL,
+    query = "SELECT j from Joiner j")
+public class Joiner implements Serializable {
 
     
-    public static final String SQL_FIND_ALL = "Member.SQL_FIND_ALL";
+    public static final String SQL_FIND_ALL = "Joiner.SQL_FIND_ALL";
 
     @Id
     @Basic(optional = false)
