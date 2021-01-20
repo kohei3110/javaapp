@@ -1,28 +1,41 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ApplicationArchitecture1.backend;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import ApplicationArchitecture1.common.Joiner;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 /**
- *
+ * 
  * @author Kohei Saito
  */
 public class JpaDao {
-    // DBから値を取得する
     
-    private static final String URL = "jdbc:oracle:thin:@localhost:1521/orcl";
-    private static final String USER_NAME = "sample_user";
-    private static final String PASSWORD = "WElcome##01";
-    private static final String QUERY = "SELECT sysdate FROM dual";
+    private static final String UNIT_NAME = "oracle_persistence_unit";
     
+    @PersistenceContext(unitName = UNIT_NAME)
+    private EntityManager em;
     
+    @Inject
+    private transient Logger logger;
     
+    public List<Joiner> getAllJoiner(){
+        logger.log(Level.FINE, "JpaDao#getAllJoiner() is called.");
+        
+        TypedQuery<Joiner> query = em.createNamedQuery(Joiner.SQL_FIND_ALL, Joiner.class);
+        
+        List<Joiner> joiner = null;
+        
+        try {
+            joiner = query.getResultList();       
+        } catch (Throwable t) {
+            logger.log(Level.SEVERE, t.getMessage());
+        }
+        
+        return joiner;
+    }
 }

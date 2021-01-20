@@ -1,11 +1,13 @@
 package ApplicationArchitecture1.frontend;
 
-import ApplicationArchitecture1.common.Member;
+import ApplicationArchitecture1.common.Joiner;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -18,20 +20,21 @@ import javax.ws.rs.core.Response;
  *
  * @author Kohei Saito
  */
-public class RestClient {
+@Dependent
+public class RestClient implements Serializable {
     
     private static final String baseName = "applicationArchitecture";
     
     private static final int RESPONSE_CODE_OK = 200;
     
     @Inject
-    private Logger logger;
+    private transient Logger logger;
     
     /**
      * バックエンドのアプリケーションからMemberデータを全件取得するメソッド。
      * @return Memberデータの結果セット
      */
-    public List<Member> getAllMember(){
+    public List<Joiner> getAllJoiner(){
         ResourceBundle bundle = ResourceBundle.getBundle(baseName);
         
         String target = bundle.getString("TARGET_URL");
@@ -46,16 +49,16 @@ public class RestClient {
         
         Response response = invocation.invoke();
         
-        List<Member> member;
+        List<Joiner> joiner;
         
         if(response.getStatus() == RESPONSE_CODE_OK){
-            member = response.readEntity(new GenericType<List<Member>>(){});
+            joiner = response.readEntity(new GenericType<List<Joiner>>(){});
         } else {
             logger.log(Level.SEVERE, "Server Error");
-            member = new ArrayList<>(0);
+            joiner = new ArrayList<>(0);
         }
         
-        return member;
+        return joiner;
     }
     
 }

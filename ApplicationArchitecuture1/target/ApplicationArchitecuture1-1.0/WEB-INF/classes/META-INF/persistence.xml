@@ -4,9 +4,11 @@
   <persistence-unit name="oracle_persistence_unit">
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521/orcl" />
-      <property name="javax.persistence.jdbc.user" value="sample_user"/>
+      <property name="javax.persistence.jdbc.user" value="SAMPLE_USER"/>
       <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
       <property name="javax.persistence.jdbc.password" value="WElcome##01"/>
+      <property name="eclipselink.logging.level.sql" value="FINE" />
+      <property name="eclipselink.logging.parameters" value="true" />
     </properties>
   </persistence-unit>
 </persistence>

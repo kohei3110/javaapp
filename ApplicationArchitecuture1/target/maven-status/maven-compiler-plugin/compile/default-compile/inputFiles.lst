@@ -1,6 +1,8 @@
-/Users/kohei/oracle-project/sampleapp1_v1.0/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/backend/Ejb.java
-/Users/kohei/oracle-project/sampleapp1_v1.0/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/backend/RestApplication.java
-/Users/kohei/oracle-project/sampleapp1_v1.0/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/backend/JpaDao.java
-/Users/kohei/oracle-project/sampleapp1_v1.0/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/frontend/BackingBean.java
-/Users/kohei/oracle-project/sampleapp1_v1.0/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/frontend/RestClient.java
-/Users/kohei/oracle-project/sampleapp1_v1.0/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/backend/RestServer.java
+/Users/kohei/sampleapp/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/common/LoggerProducer.java
+/Users/kohei/sampleapp/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/common/Joiner.java
+/Users/kohei/sampleapp/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/frontend/RestClient.java
+/Users/kohei/sampleapp/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/backend/RestServer.java
+/Users/kohei/sampleapp/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/backend/RestApplication.java
+/Users/kohei/sampleapp/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/backend/Ejb.java
+/Users/kohei/sampleapp/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/frontend/BackingBean.java
+/Users/kohei/sampleapp/ApplicationArchitecuture1/src/main/java/ApplicationArchitecture1/backend/JpaDao.java
