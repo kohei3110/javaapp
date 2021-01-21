@@ -30,3 +30,9 @@ The resulting images will be an image with the Oracle binaries installed. On fir
 DATABASE IS READY TO USE!
 #########################
 ```
+
+```
+$ docker ps
+CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS                    PORTS                                            NAMES
+e85249e82ae4        oracle/database:19.3.0-ee   "/bin/sh -c 'exec $O…"   27 minutes ago      Up 27 minutes (healthy)   0.0.0.0:1521->1521/tcp, 0.0.0.0:5500->5500/tcp   oracle
+```
