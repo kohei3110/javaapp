@@ -21,5 +21,12 @@ The purpose of this application is above.
 `$ cp ~/Downloads/LINUX.X64_193000_db_home.zip .`
 
 ### Build Database
-`$ cd ..
- $ ./buildDockerImage.sh -v 19.3.0 -e`
+`$ cd ..`<br>
+`$ ./buildDockerImage.sh -v 19.3.0 -e`
+
+The resulting images will be an image with the Oracle binaries installed. On first startup of the container a new database will be created, the following lines highlight when the database is ready to be used:
+```
+#########################
+DATABASE IS READY TO USE!
+#########################
+```
