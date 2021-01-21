@@ -13,10 +13,13 @@ The purpose of this application is above.
 
 ## Setup Oracle Database
 ### Clone Official Repository
-`git clone https://github.com/oracle/docker-images.git`
+`$ git clone https://github.com/oracle/docker-images.git`
 
 ### Download Oracle Database Software
 <a href="https://www.oracle.com/database/technologies/oracle-database-software-downloads.html">19.3 - Enterprise Edition (also includes Standard Edition 2)</a><br>
-`cd docker-images/OracleDatabase/SingleInstance/dockerfiles`<br>
-`cp ~/Downloads/LINUX.X64_193000_db_home.zip .`
+`$ cd docker-images/OracleDatabase/SingleInstance/dockerfiles`<br>
+`$ cp ~/Downloads/LINUX.X64_193000_db_home.zip .`
 
+### Build Database
+`$ cd ..
+ $ ./buildDockerImage.sh -v 19.3.0 -e`
