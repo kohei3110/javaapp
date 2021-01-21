@@ -36,3 +36,17 @@ $ docker ps
 CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS                    PORTS                                            NAMES
 e85249e82ae4        oracle/database:19.3.0-ee   "/bin/sh -c 'exec $O…"   27 minutes ago      Up 27 minutes (healthy)   0.0.0.0:1521->1521/tcp, 0.0.0.0:5500->5500/tcp   oracle
 ```
+
+### Connect to Database
+```
+$ docker exec -it oracle bash
+[oracle@e85249e82ae4 ~]$ sqlplus /nolog
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Thu Jan 21 16:52:54 2021
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+SQL> conn sys/WElcome##01@ORCL as sysdba;
+Connected.
+```
