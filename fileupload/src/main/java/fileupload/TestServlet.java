@@ -14,7 +14,6 @@ import java.io.PrintWriter;
  * @author Kohei Saito
  */
 @WebServlet(urlPatterns = { "/TestServlet" })
-//@MultipartConfig(location = "/tmp")
 @MultipartConfig
 public class TestServlet extends HttpServlet {
 
