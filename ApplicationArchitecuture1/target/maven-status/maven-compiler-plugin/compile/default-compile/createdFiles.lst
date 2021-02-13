@@ -1,9 +1,0 @@
-ApplicationArchitecture1/backend/RestServer.class
-ApplicationArchitecture1/common/LoggerProducer.class
-ApplicationArchitecture1/backend/JpaDao.class
-ApplicationArchitecture1/backend/RestApplication.class
-ApplicationArchitecture1/frontend/RestClient.class
-ApplicationArchitecture1/common/Joiner.class
-ApplicationArchitecture1/frontend/RestClient$1.class
-ApplicationArchitecture1/backend/Ejb.class
-ApplicationArchitecture1/frontend/BackingBean.class
